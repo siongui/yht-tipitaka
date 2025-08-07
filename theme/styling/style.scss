@@ -1,0 +1,44 @@
+// reponsive class names are the same as bootstrap 3
+// @see http://getbootstrap.com/css/
+$screen-xs-max: 767;
+$screen-sm-min: 768;
+$screen-md-min: 992;
+$screen-lg-min: 1200;
+
+$smartphone: "(max-width: #{$screen-xs-max}px)";
+$non-smartphone: "(min-width: #{$screen-sm-min}px)";
+
+
+  @media screen and (max-width: 1023px) {
+    /* show mavbar-menu on screen less than 1024px */
+    #menu-toggle:checked ~ #theravadacnNavbarMenu { display: block; }
+
+    /* make navbar-burger become cross on screen less than 1024px */
+    #menu-toggle:checked + .navbar-brand > label > span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+    #menu-toggle:checked + .navbar-brand > label > span:nth-child(2) { opacity: 0; }
+    #menu-toggle:checked + .navbar-brand > label > span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+    /* you can also replace + with ~ in above three rules and get the same result */
+  }
+
+
+table.docutils.footnote {
+	width: auto;
+}
+
+.section {
+	.section {
+		padding: 1rem 0.5rem;
+	}
+}
+
+// Google search: stack td on mobile
+// Stack two <td> over each other
+// https://stackoverflow.com/a/15571109
+.stack-th-td-on-mobile {
+  @media #{$smartphone} {
+    th,td {
+      display: block;
+      clear: both;
+    }
+  }
+}
