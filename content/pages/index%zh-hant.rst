@@ -12,6 +12,7 @@
   (`搜尋技巧 <https://www.google.com/search?q=957+pdf+static.sariputta.com>`__)
   (`目次 <https://buddhist.laogongshuo.com/>`__)
   (`目次 <https://www.lama.com.tw/content/edu/data.aspx?id=542>`__)
+  (`目次 <https://www.sariputta.com/tipitaka/mandarin>`__)
 
   - `律藏一 經分別一 <https://static.sariputta.com/pdf/tipitaka/909/01.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/909/01.pdf>`__)
@@ -128,6 +129,13 @@
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/963/patthana2.pdf>`__)
   - \* `56論藏 發趣論三 <https://static.sariputta.com/pdf/tipitaka/964/patthana3.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/964/patthana3.pdf>`__)
+  - \* `57論藏 發趣論四 <https://static.sariputta.com/pdf/tipitaka/965/patthana4.pdf>`_
+    (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/965/patthana4.pdf>`__)
+  - \* `58論藏 發趣論五 <https://static.sariputta.com/pdf/tipitaka/966/patthana5.pdf>`_
+    (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/966/patthana5.pdf>`__)
+  - \* `59論藏 發趣論六 <https://static.sariputta.com/pdf/tipitaka/967/patthana6.pdf>`_
+    (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/967/patthana6.pdf>`__)
+  - 60論藏 發趣論七 (缺)
   - \* `61論藏 論事一 <https://static.sariputta.com/pdf/tipitaka/959/kathavatthu1.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/959/kathavatthu1.pdf>`__)
   - \* `62論藏 論事二 <https://static.sariputta.com/pdf/tipitaka/961/kathavatthu2.pdf>`_
