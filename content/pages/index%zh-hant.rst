@@ -16,7 +16,7 @@
 | 【完整性】53-71冊缺封面、版權頁
 | 【清晰度】清晰
 
-+ [PDF] `Google Search 漢譯南傳大藏經 site: static.sariputta.com <https://www.google.com/search?q=%E6%BC%A2%E8%AD%AF%E5%8D%97%E5%82%B3%E5%A4%A7%E8%97%8F%E7%B6%93+site%3A+static.sariputta.com>`_
++ [PDF] (`搜尋技巧 <https://www.google.com/search?q=%E6%BC%A2%E8%AD%AF%E5%8D%97%E5%82%B3%E5%A4%A7%E8%97%8F%E7%B6%93+site%3A+static.sariputta.com>`__)
   (`搜尋技巧 <https://www.google.com/search?q=%E6%BC%A2%E8%AD%AF%E5%8D%97%E5%82%B3%E5%A4%A7%E8%97%8F%E7%B6%93+938+pdf+sariputta.com>`__)
   (`搜尋技巧 <https://www.google.com/search?q=957+pdf+static.sariputta.com>`__)
   (`目次 <https://buddhist.laogongshuo.com/>`__)
@@ -26,6 +26,7 @@
   - 冊數 / 部類 / 經名
   - `01律藏一 經分別一 <https://static.sariputta.com/pdf/tipitaka/909/01.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/909/01.pdf>`__)
+    (`Scribd <https://www.scribd.com/document/757386032/%E6%BC%A2%E8%AD%AF%E5%8D%97%E5%82%B3%E5%A4%A7%E8%97%8F%E7%B6%93>`__)
   - `02律藏二 經分別二 <https://static.sariputta.com/pdf/tipitaka/910/02.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/910/02.pdf>`__)
   - `03律藏三 大品 <https://static.sariputta.com/pdf/tipitaka/911/03.pdf>`_
@@ -126,6 +127,7 @@
     (`Scribd <https://www.scribd.com/document/807741230/49-%E5%88%86%E5%88%A5%E8%AB%96%E4%B8%80>`__)
   - `50論藏 分別論二 界論 人施設論 <https://static.sariputta.com/pdf/tipitaka/958/dhatu_katha.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/958/dhatu_katha.pdf>`__)
+    (`Scribd <https://www.scribd.com/document/807741245/50-%E5%88%86%E5%88%A5%E8%AB%96%E4%BA%8C>`__)
   - `51論藏 雙論一 <https://static.sariputta.com/pdf/tipitaka/969/yamaka1.pdf>`_
     (`mirror <{static}/extra/pdf-mirror/static.sariputta.com/pdf/tipitaka/969/yamaka1.pdf>`__)
   - `52論藏 雙論二 <https://static.sariputta.com/pdf/tipitaka/970/yamaka2.pdf>`_
@@ -248,3 +250,9 @@
         <tr><td>0037</td><td>70藏外</td><td><a href="N70n0037.htm" target="_blank">攝阿毘達磨義論</a>,</td><td>【阿那律陀著　悟醒譯】</td></tr>
         <tr><td>0038</td><td>70藏外</td><td><a href="N70n0038.htm" target="_blank">阿育王刻文</a>,</td><td>【悟醒譯】</td></tr>
     </tbody></table>
+
+- `佛教方面的书，实在是太多了，速存_共享资源_架构师_程序员_码农网  <https://www.itsvse.com/thread-6165-1-1.html>`_
+
+  * | 漢譯南傳大藏經元亨寺妙林民7910-8711初版\\74pdf
+    | 鏈接: https://pan.baidu.com/s/1Y2gxaBehv9AsySM5EXn5Dw
+    | 提取碼: 3gd6
