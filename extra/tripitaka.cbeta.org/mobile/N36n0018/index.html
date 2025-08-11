@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>CBETA 漢文大藏經</title>
+<meta content="CBETA 數位藏經閣 大正藏 卍續藏 漢文電子佛典目錄" name="description"/>
+<meta content="CBETA, 中華電子佛典協會, 數位藏經閣, 大正藏, 卍續藏, 大藏經, 漢文電子佛典, 漢文佛典, 佛典電子化, 電子佛典, 佛典, 佛經, 佛教, 佛法, 佛教經典, 三藏, 經藏, 素怛纜, 律藏, 毗奈耶, 毘奈耶, 毘尼, 毗尼, 論藏, 阿毗達磨, 阿毘達磨, 法寶, 達磨, Tripitaka, Pitaka, Taisho, Xuzangjing, Canon, Sutra, Buddhist, Buddhism, Vinaya, Abhidharma, Abhidhamma, Abhidarma, Dhamma, Bible" name="keywords"/>
+<!-- 這個版本可以縮放文字大小
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+-->
+<link href="https://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.css" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
+</head>
+<img src="/ga.php?utmac=MO-30696269-4&amp;utmn=1977082219&amp;utmr=-&amp;utmp=%2Fmobile%2Findex.php%3Findex%3DN36n0018&amp;guid=ON"/><body>
+<script type="text/javascript">
+function OnInput (event)
+{
+	var chCode = event.keyCode;
+	if(chCode == 13)
+	{
+		search = "index.php?search=" + event.target.value;
+		location.replace(search);
+	}
+}
+</script>
+<div class="type-index" data-role="page">
+<div data-role="header">
+<p style="text-align:center">漢譯南傳大藏經　第36冊<br/>No.18 本生經(第10卷-第13卷) (4卷)<br/>【悟醒譯】</p>
+</div><!-- /header -->
+<div data-role="content">
+	請選擇卷數
+		<ul data-inset="true" data-role="listview"> <!-- data-inset="true" 表示列表會在小範內 --><li><a href="../N36n0018_010/">第 10 卷</a></li>
+<li><a href="../N36n0018_011/">第 11 卷</a></li>
+<li><a href="../N36n0018_012/">第 12 卷</a></li>
+<li><a href="../N36n0018_013/">第 13 卷</a></li>
+</ul>
+</div><!-- /content -->
+<div data-position="fixed" data-role="footer">
+<table><tr>
+<td><a data-icon="arrow-l" data-role="button" data-theme="b" href="../N36/">回上層</a></td>
+<td><a data-icon="home" data-role="button" data-theme="b" href="https://tripitaka.cbeta.org/mobile/index.php">回首頁</a></td>
+<td><input data-theme="b" id="search-basic" name="search" onkeypress="OnInput(event)" placeholder="目錄搜尋" type="search" value=""/></td>
+</tr></table>
+</div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>

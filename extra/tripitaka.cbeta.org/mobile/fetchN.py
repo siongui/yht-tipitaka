@@ -7,6 +7,7 @@ from urllib.parse import urlparse, parse_qs
 import os
 
 base_url = 'https://tripitaka.cbeta.org/mobile/index.php'
+isDone = {}
 
 
 def get_query_string_index(url: str) -> str:
@@ -26,23 +27,13 @@ def get_query_string_index(url: str) -> str:
 
 
 def fetch_and_save_page(url: str) -> list:
-    """
-    Fetches a webpage, saves its HTML to a file, and returns all href links.
-
-    Args:
-        url (str): The URL to fetch.
-        output_file (str): The local filename to save the HTML content.
-
-    Returns:
-        list: A list of href links found in the page.
-    """
     try:
         response = requests.get(url)
 
         if response.status_code == 200:
             html_content = response.text
 
-            links = []
+            indexes = []
 
             # Parse HTML and extract hrefs
             soup = BeautifulSoup(html_content, 'html.parser')
@@ -56,7 +47,7 @@ def fetch_and_save_page(url: str) -> list:
                     a['href'] = base_url
                 else:
                     a['href'] = f"../{idx}/"
-                    links.append(idx)
+                    indexes.append(idx)
 
             folder_path = get_query_string_index(url)
             output_file = folder_path + '/index.html'
@@ -67,8 +58,8 @@ def fetch_and_save_page(url: str) -> list:
                 f.write(str(soup))
             print(f"✅ Page saved to: {output_file}")
 
-            print(f"🔗 Return {len(links)} links.")
-            return links
+            print(f"🔗 Return {len(indexes)} indexes.")
+            return indexes
         else:
             print(f"❌ Failed to fetch page. Status code: {response.status_code}")
             return []
@@ -77,11 +68,17 @@ def fetch_and_save_page(url: str) -> list:
         print(f"⚠️ Error: {e}")
         return []
 
+
+def recursive_fetch(index: str):
+    indexes = fetch_and_save_page(base_url + f'?index={index}')
+    isDone[index] = True
+
+    for index in indexes:
+        if index not in isDone:
+            recursive_fetch(index)
+
+
 # Example usage
 if __name__ == "__main__":
-    hrefs = fetch_and_save_page(base_url + '?index=N')
-
-    # Print the links
-    #for href in hrefs:
-    #    print(href)
+    recursive_fetch('N')
 
