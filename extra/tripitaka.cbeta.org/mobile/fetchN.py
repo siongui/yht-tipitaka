@@ -5,6 +5,19 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
 
+def get_query_dict(url: str) -> dict:
+    # Parse the URL
+    parsed_url = urlparse(url)
+
+    # Extract the raw query string
+    query_string = parsed_url.query
+
+    # Convert query string to dictionary
+    query_dict = parse_qs(query_string)
+
+    return query_dict
+
+
 def fetch_and_save_page(url: str) -> list:
     """
     Fetches a webpage, saves its HTML to a file, and returns all href links.
@@ -32,17 +45,12 @@ def fetch_and_save_page(url: str) -> list:
             for a in soup.find_all('a', href=True):
                 old_href = a['href']
 
-                # Parse the URL
-                parsed_url = urlparse(old_href)
+                query_dict = get_query_dict(old_href)
+                #print("Parsed query string:", query_dict)
+                if 'index' in query_dict:
+                    print(query_dict['index'])
+                    a['href'] = query_dict['index'][0] + '/'
 
-                # Extract the raw query string
-                query_string = parsed_url.query
-
-                # Convert query string to dictionary
-                query_dict = parse_qs(query_string)
-                print("Parsed query string:", query_dict)
-
-                a['href'] = 'https://example.com'
                 links.append(old_href)
 
             # Save HTML to file
