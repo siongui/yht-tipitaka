@@ -7,6 +7,7 @@ from urllib.parse import urlparse, parse_qs
 import os
 
 base_url = 'https://tripitaka.cbeta.org/mobile/index.php'
+isDone = {}
 
 
 def get_query_string_index(url: str) -> str:
@@ -68,14 +69,16 @@ def fetch_and_save_page(url: str) -> list:
         return []
 
 
-def recursive_fetch(query_string: str):
-    indexes = fetch_and_save_page(base_url + query_string)
+def recursive_fetch(index: str):
+    indexes = fetch_and_save_page(base_url + f'?index={index}')
+    isDone[index] = True
 
     for index in indexes:
-        recursive_fetch(f'?index={index}')
+        if index not in isDone:
+            recursive_fetch(index)
 
 
 # Example usage
 if __name__ == "__main__":
-    recursive_fetch('?index=N')
+    recursive_fetch('N')
 
