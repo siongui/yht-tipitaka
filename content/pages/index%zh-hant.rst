@@ -7,6 +7,9 @@
 :og_image: {static}/extra/Dharma_wheel.png
 
 
++ `CBETA 元亨寺漢譯南傳大藏經 <https://tripitaka.cbeta.org/mobile/index.php?index=N>`_
+  (`mirror <extra/tripitaka.cbeta.org/mobile/N/>`__)
+
 | 【作　者】 元亨寺漢譯南傳大藏經編譯委員會
 | 【叢書名】 漢譯·南傳大藏經
 | 【出版項】元亨寺妙林出版社
