@@ -4,8 +4,12 @@
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
+import os
 
-def get_query_dict(url: str) -> dict:
+base_url = 'https://tripitaka.cbeta.org/mobile/index.php'
+
+
+def get_query_string_index(url: str) -> str:
     # Parse the URL
     parsed_url = urlparse(url)
 
@@ -15,7 +19,10 @@ def get_query_dict(url: str) -> dict:
     # Convert query string to dictionary
     query_dict = parse_qs(query_string)
 
-    return query_dict
+    if 'index' not in query_dict:
+        return None
+
+    return query_dict['index'][0]
 
 
 def fetch_and_save_page(url: str) -> list:
@@ -36,29 +43,31 @@ def fetch_and_save_page(url: str) -> list:
             html_content = response.text
 
             links = []
-            output_file = 'index.html'
 
             # Parse HTML and extract hrefs
             soup = BeautifulSoup(html_content, 'html.parser')
 
-            # find all tags with href
+            # find a tags with href
             for a in soup.find_all('a', href=True):
-                old_href = a['href']
+                idx = get_query_string_index(a['href'])
+                #print(idx)
 
-                query_dict = get_query_dict(old_href)
-                #print("Parsed query string:", query_dict)
-                if 'index' in query_dict:
-                    print(query_dict['index'])
-                    a['href'] = query_dict['index'][0] + '/'
+                if idx is None:
+                    a['href'] = base_url
+                else:
+                    a['href'] = f"../{idx}/"
+                    links.append(idx)
 
-                links.append(old_href)
-
+            folder_path = get_query_string_index(url)
+            output_file = folder_path + '/index.html'
+            # Create the folder if it doesn't exist
+            os.makedirs(folder_path, exist_ok=True)
             # Save HTML to file
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(str(soup))
             print(f"✅ Page saved to: {output_file}")
 
-            print(f"🔗 Found {len(links)} links.")
+            print(f"🔗 Return {len(links)} links.")
             return links
         else:
             print(f"❌ Failed to fetch page. Status code: {response.status_code}")
@@ -70,8 +79,7 @@ def fetch_and_save_page(url: str) -> list:
 
 # Example usage
 if __name__ == "__main__":
-    url = 'https://tripitaka.cbeta.org/mobile/index.php?index=N'
-    hrefs = fetch_and_save_page(url)
+    hrefs = fetch_and_save_page(base_url + '?index=N')
 
     # Print the links
     #for href in hrefs:
