@@ -44,7 +44,8 @@ def fetch_and_save_page(url: str) -> list:
                 #print(idx)
 
                 if idx is None:
-                    a['href'] = base_url
+                    if a['href'] == 'index.php':
+                        a['href'] = base_url
                 else:
                     a['href'] = f"../{idx}/"
                     indexes.append(idx)
